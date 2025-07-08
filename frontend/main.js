@@ -2,7 +2,7 @@
 
 // --- Konfigurasjon ---
 // ERSTATT MED DIN EGEN CESIUM ION NØKKEL
-Cesium.Ion.defaultAccessToken = 'DIN_CESIUM_ION_NØKKEL_HER'; 
+Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIzYTEyZmVmMS0zYzU2LTRmYWUtOTliYS01NjExMTFkYTE1YzAiLCJpZCI6MzE5NDYxLCJpYXQiOjE3NTE5NTQxNjF9.W_pD3hWbgI0timM4CmDX8Tv9W9D7Cjt2oRdRqNdUh2Q'; 
 const WEBSOCKET_URL = "ws://127.0.0.1:8000/ws/satellites";
 const API_URL = "http://127.0.0.1:8000/api";
 
