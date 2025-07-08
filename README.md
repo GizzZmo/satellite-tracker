@@ -3,21 +3,36 @@
 Dette prosjektet er et komplett system for sanntidssporing og 3D-visualisering av satellitter i bane rundt jorden. Det er bygget på en tre-lags arkitektur som beskrevet i den tekniske blåpausen.ArkitekturoversiktBackend: En Python-applikasjon bygget med FastAPI.Datainnhentingstjeneste: En planlagt prosess (scheduler) som henter satellittkatalog (SATCAT) og banedata (OMM) fra Space-Track.org.Propagerings- og API-tjeneste: En FastAPI-server som: Leser de siste banedataene fra en lokal database.Bruker sgp4-biblioteket til å beregne satellittenes nåværende posisjon. Strømmer posisjonsdata i sanntid til frontend-klienter via WebSockets. Tilbyr et REST API for å hente beregnede banespor.Frontend: En web-applikasjon bygget med ren HTML, CSS og JavaScript.Bruker CesiumJS for å rendere en interaktiv 3D-globus.Kobler til backend via WebSockets for å motta og visualisere satellittposisjoner i sanntid.Implementerer brukergrensesnitt for søk, filtrering og visning av detaljert informasjon.Oppsett og KjøringForutsetningerPython 3.8+En konto på Space-Track.org for å få tilgang til API-et.En gratis Cesium Ion-tilgangsnøkkel fra cesium.com for høyoppløselige kartlag.
 
 satellite-tracker/
+
 ├── backend/
+
 │   ├── app/
+
 │   │   ├── __init__.py
+
 │   │   ├── data_fetcher.py   # Henter data fra Space-Track.org
+
 │   │   ├── main.py           # FastAPI-app, WebSocket og API-endepunkter
+
 │   │   ├── models.py         # SQLAlchemy-databasemodeller
+
 │   │   └── scheduler.py      # APScheduler for planlagt datainnhenting
+
 │   ├── run_scheduler.py      # Skript for å starte scheduler-prosessen
+
 │   └── requirements.txt      # Python-avhengigheter
+
 │
 ├── frontend/
+
 │   ├── index.html            # Hovedsiden med Cesium-container
+
 │   ├── main.js               # JavaScript-logikk for Cesium og UI
+
 │   └── style.css             # CSS for brukergrensesnitt
+
 │
+
 └── README.md                 # Prosjektdokumentasjon
 
 ### 1. Backend Oppsetta. Naviger til backend-mappen:
