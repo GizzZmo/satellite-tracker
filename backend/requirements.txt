@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+websockets
+sqlalchemy
+requests
+apscheduler
+pyproj
+python-dotenv
+sgp4
