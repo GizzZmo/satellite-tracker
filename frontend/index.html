@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satellittsporing i Sanntid</title>
+    
+    <!-- Importerer CesiumJS CSS -->
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.118/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    
+    <!-- Importerer lokal CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Container for Cesium 3D-globusen -->
+    <div id="cesiumContainer"></div>
+
+    <!-- UI-elementer for kontroll -->
+    <div id="ui-container">
+        <div class="header">
+            <h1>Satellittsporing</h1>
+            <div id="connection-status" class="disconnected">● Frakoblet</div>
+        </div>
+        <input type="text" id="searchInput" placeholder="Søk etter navn eller NORAD ID...">
+    </div>
+
+    <!-- Importerer CesiumJS biblioteket -->
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.118/Build/Cesium/Cesium.js"></script>
+    
+    <!-- Importerer lokal JavaScript-logikk -->
+    <script src="main.js"></script>
+</body>
+</html>
